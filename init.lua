@@ -15,3 +15,8 @@ require('lsp-config.language-servers')
 
 require('lsp-config.nvim-cmp')
 
+-- https://github.com/nvim-lualine/lualine.nvim
+require('lualine-config')
+
+-- https://github.com/romgrk/barbar.nvim
+require('barbar-config')
