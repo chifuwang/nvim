@@ -8,6 +8,12 @@ return require('packer').startup(function(use)
   use 'rcarriga/nvim-notify'
   use 'nvim-lualine/lualine.nvim'
   use 'romgrk/barbar.nvim'
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use 'nvim-treesitter/nvim-treesitter-refactor'
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
   -- LSP plugins
   use 'neovim/nvim-lspconfig'
