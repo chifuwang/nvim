@@ -6,11 +6,12 @@ require('colorschemes-config.nightfox')
 -- https://github.com/wbthomason/packer.nvim
 require('plugins')
 
+-- https://docs.rockylinux.org/books/nvchad/nvchad_ui/nvimtree/
+-- https://github.com/nvim-tree/nvim-tree.lua
 require('nvim-tree-config')
--- vim.keymap.set('i', 'jj', '<Esc>')
 
+-- https://github.com/neovim/nvim-lspconfig
 require('lsp-config.language-servers')
-
 require('lsp-config.nvim-cmp')
 
 -- https://github.com/nvim-lualine/lualine.nvim
