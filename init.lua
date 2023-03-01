@@ -11,8 +11,11 @@ require('plugins')
 require('nvim-tree-config')
 
 -- https://github.com/neovim/nvim-lspconfig
+-- https://github.com/williamboman/mason.nvim
+require('mason-config')
 require('lsp-config.language-servers')
 require('lsp-config.nvim-cmp')
+require('lsp-config.null-ls')
 
 -- https://github.com/nvim-lualine/lualine.nvim
 require('lualine-config')

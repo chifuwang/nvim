@@ -30,6 +30,10 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+  local function buf_set_keymap(...)
+    vim.api.nvim_buf_set_keymap(bufnr, ...)
+  end
+  buf_set_keymap("n", "<leaderlf", ":lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
 local lsp_flags = {
@@ -50,3 +54,15 @@ require('lspconfig')['html'].setup{
     flags = lsp_flags,
     capabilities = capabilities,
 }
+
+
+require('lspconfig')['cssls'].setup{
+    capabilities = capabilities,
+}
+
+require('lspconfig')['emmet_ls'].setup{}
+
+require('lspconfig')['eslint'].setup{}
+
+require('lspconfig')['java_language_server'].setup{}
+
