@@ -33,7 +33,7 @@ local on_attach = function(client, bufnr)
   local function buf_set_keymap(...)
     vim.api.nvim_buf_set_keymap(bufnr, ...)
   end
-  buf_set_keymap("n", "<leaderlf", ":lua vim.lsp.buf.formatting()<CR>", opts)
+  buf_set_keymap("n", "<leader>lf", ":lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
 local lsp_flags = {
